@@ -1,9 +1,7 @@
 const hr=document.getElementById('hour');
 const mi=document.getElementById('min');   
 const se=document.getElementById('sec');
-const ticSound=document.getElementById('tictic')
-// const sound=new Audio('sound.mp3');
-
+const sound = new Audio('sound.mp3');
 
 const disTime=()=>{
   let date=new Date();
@@ -19,21 +17,18 @@ const disTime=()=>{
   mi.style.transform= `rotate(${mRotation}deg)`;
   se.style.transform= `rotate(${sRotation}deg)`;
 
-  // sound.currentTime=0;
-  // sound.play()
 
+  
+ 
+  sound.currentTime = 0; 
+  sound.play();
 
-  // let sound =new Audio('sound.mp3')
-  // sound.play()
-
-  ticPlay();
+//  let sound=new Audio('sound.mp3');
+//  sound.play();
+  
 
 }
 
-const ticPlay=()=>{
-  ticSound.currentTime=0;
-  ticSound.play();
-}
 
 setInterval(disTime,1000)
 
